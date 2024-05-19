@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title> Simple Game </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onkeydown="moveHero(event)">
+    <main>
+        <div class="content">
+
+            <!-- SUCCESSFUL POP-UP -->
+            <div class="pop_up_wrapper" id="successful_popup">
+                <div class="pop_up_background">
+                    <div class="pop_up_box">
+                        <div class="result">
+                            <div class="image" style="background-image: url('./pic/won.jpg');"></div>
+                            <div class="text">
+                                <h2> CONGRATULATION! </h2>
+                                <h3 id="win_text">YOU WON</h3>
+                            </div>
+                        </div>
+                        <div class="close_box" onclick="location.reload()">
+                            <label for="final_result" class="close_icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAILED POP-UP -->
+            <div class="pop_up_wrapper" id="failed_popup">
+                <div class="pop_up_background">
+                    <div class="pop_up_box">
+                        <div class="result">
+                            <div class="image" style="background-image: url('./pic/lost.jpg');"></div>
+                            <div class="text">
+                                <h2> SORRY! </h2>
+                                <h3 id="lose_text"> GAME OVER </h3>
+                            </div>
+                        </div>
+
+                        <div class="close_box" onclick="location.reload()">
+                            <label for="final_result" class="close_icon">
+                                <i class="fa-solid fa-xmark"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CIRCLES -->
+            <div class="circles_wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+
+            <!-- USER ICON -->
+            <div class="user_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24"><path fill="#ff6c00" d="M12 2a9.98 9.98 0 0 1 7.743 3.671L13.414 12l6.329 6.329A9.98 9.98 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2zm0 3a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3z"/></svg>
+            </div>
+        </div>
+
+        <!-- TIMER -->
+        <div class="countdown">
+            <div class="time_box">
+                <span class="minutes"> 00 </span>
+                <span class="seconds"> 30 </span>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
